@@ -1,44 +1,83 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Activity, Globe, LogOut } from 'lucide-react';
+import { Activity, Globe, AlertTriangle, Menu, X } from 'lucide-react';
 import { useAppContext } from '../context/AppContext';
 
 const Header = () => {
-  const { t, toggleLanguage, lang } = useAppContext();
+  const { t, lang, setLanguage, syncQueue, isOnline } = useAppContext();
   const location = useLocation();
-  const isClinic = location.pathname === '/clinic';
+  const [mobileOpen, setMobileOpen] = useState(false);
+
+  const navItems = [
+    { path: '/', label: t.workerPortal },
+    { path: '/clinic', label: t.clinicPortal },
+    { path: '/privacy', label: t.privacy },
+    { path: '/insurance', label: t.insurance },
+    { path: '/blockchain', label: t.blockchain },
+    { path: '/sms', label: 'SMS' },
+  ];
 
   return (
     <header className="app-header">
       <div className="container header-content">
         <Link to="/" className="logo-area">
-          <Activity size={28} />
+          <div className="logo-icon">
+            <Activity size={20} />
+          </div>
           <span>{t.appTitle}</span>
         </Link>
-        
-        <div className="flex-center gap-md">
-          <nav className="flex-center gap-sm">
-            <Link 
-              to="/" 
-              className={`btn ${!isClinic ? 'btn-secondary' : 'btn-outline'}`}
-              style={{ padding: '0.5rem 1rem', fontSize: '0.875rem' }}
-            >
-              {t.workerPortal}
-            </Link>
-            <Link 
-              to="/clinic" 
-              className={`btn ${isClinic ? 'btn-secondary' : 'btn-outline'}`}
-              style={{ padding: '0.5rem 1rem', fontSize: '0.875rem' }}
-            >
-              {t.clinicPortal}
-            </Link>
-          </nav>
 
-          <div style={{ width: '1px', height: '24px', backgroundColor: '#e2e8f0', margin: '0 0.5rem' }}></div>
+        <nav className={`nav-links ${mobileOpen ? 'open' : ''}`}>
+          {navItems.map(item => (
+            <Link
+              key={item.path}
+              to={item.path}
+              className={`nav-link ${location.pathname === item.path ? 'active' : ''}`}
+              onClick={() => setMobileOpen(false)}
+            >
+              {item.label}
+            </Link>
+          ))}
+        </nav>
 
-          <button onClick={toggleLanguage} className="btn btn-outline" style={{ padding: '0.5rem', borderRadius: '50%' }} title={t.switchLang}>
-            <Globe size={18} />
-            <span style={{ fontSize: '0.75rem', marginLeft: '0.25rem', fontWeight: 'bold' }}>{lang.toUpperCase()}</span>
+        <div className="header-actions">
+          {/* Language Selector */}
+          <div style={{ display: 'flex', alignItems: 'center', gap: '0.35rem' }}>
+            <Globe size={14} style={{ color: 'var(--text-muted)' }} />
+            <select
+              className="lang-select"
+              value={lang}
+              onChange={(e) => setLanguage(e.target.value)}
+            >
+              <option value="en">EN</option>
+              <option value="hi">हिं</option>
+              <option value="ta">தமி</option>
+              <option value="bn">বাং</option>
+            </select>
+          </div>
+
+          {/* Sync Badge */}
+          {syncQueue.length > 0 && (
+            <span className="badge badge-warning" style={{ fontSize: '0.65rem' }}>
+              {syncQueue.length} pending
+            </span>
+          )}
+
+          {/* ICE Button */}
+          <Link
+            to="/emergency"
+            className="btn btn-danger btn-sm"
+            style={{ fontWeight: 700, letterSpacing: '0.05em' }}
+          >
+            <AlertTriangle size={14} /> ICE
+          </Link>
+
+          {/* Mobile Hamburger */}
+          <button
+            className="mobile-menu-btn"
+            onClick={() => setMobileOpen(!mobileOpen)}
+          >
+            {mobileOpen ? <X size={22} /> : <Menu size={22} />}
           </button>
         </div>
       </div>
