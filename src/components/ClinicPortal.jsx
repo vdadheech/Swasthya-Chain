@@ -330,7 +330,7 @@ const ClinicPortal = () => {
                     <h4 style={{ fontSize: '0.95rem' }}>{record.diagnosis}</h4>
                     <p className="text-muted" style={{ fontSize: '0.8rem', margin: '0.35rem 0' }}>{record.treatment}</p>
                     <div className="font-mono text-muted" style={{
-                      padding: '0.2rem 0.5rem', background: 'rgba(148,163,184,0.05)',
+                      padding: '0.2rem 0.5rem', background: 'var(--bg-input)',
                       borderRadius: 'var(--radius-sm)', fontSize: '0.65rem',
                       display: 'flex', alignItems: 'center', gap: '0.25rem', marginTop: '0.35rem'
                     }}>

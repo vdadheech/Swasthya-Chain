@@ -20,7 +20,7 @@ const InsuranceClaims = () => {
   const policy = patient.insurancePolicies?.[0];
 
   const statusConfig = {
-    draft: { color: 'var(--text-muted)', bg: 'rgba(148,163,184,0.1)', border: 'rgba(148,163,184,0.2)', label: t.draft },
+    draft: { color: 'var(--text-muted)', bg: 'var(--bg-input)', border: 'var(--glass-border)', label: t.draft },
     submitted: { color: 'var(--info)', bg: 'var(--info-bg)', border: 'var(--info-border)', label: t.submitted },
     processing: { color: 'var(--warning)', bg: 'var(--warning-bg)', border: 'var(--warning-border)', label: t.processing },
     approved: { color: 'var(--success)', bg: 'var(--success-bg)', border: 'var(--success-border)', label: t.approved },
@@ -163,7 +163,7 @@ const InsuranceClaims = () => {
                     {claim.txHash && (
                       <div className="font-mono text-muted" style={{
                         marginTop: '0.5rem', padding: '0.3rem 0.5rem',
-                        background: 'rgba(148,163,184,0.05)', borderRadius: 'var(--radius-sm)', fontSize: '0.65rem',
+                        background: 'var(--bg-input)', borderRadius: 'var(--radius-sm)', fontSize: '0.65rem',
                         display: 'flex', alignItems: 'center', gap: '0.25rem'
                       }}>
                         <Hash size={10} /> TxHash: {claim.txHash}
@@ -273,7 +273,7 @@ const InsuranceClaims = () => {
                   </div>
                   <div className="font-mono text-muted" style={{
                     marginTop: '0.75rem', padding: '0.3rem 0.5rem',
-                    background: 'rgba(148,163,184,0.05)', borderRadius: 'var(--radius-sm)', fontSize: '0.65rem',
+                    background: 'var(--bg-input)', borderRadius: 'var(--radius-sm)', fontSize: '0.65rem',
                     display: 'flex', alignItems: 'center', gap: '0.25rem'
                   }}>
                     <Hash size={10} /> Blockchain Ref: {selectedRecord.hash}

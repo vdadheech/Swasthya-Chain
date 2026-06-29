@@ -124,7 +124,7 @@ const SMSSimulator = () => {
                 value={encryptedEmergencyQR}
                 size={160}
                 level="H"
-                fgColor="#0f172a"
+                fgColor="#111111"
               />
             </div>
             <p className="text-muted" style={{ fontSize: '0.7rem', marginTop: '0.75rem' }}>
@@ -168,7 +168,7 @@ const SMSSimulator = () => {
                       <div style={{
                         textAlign: 'center', fontSize: '0.65rem', color: 'var(--text-muted)',
                         margin: '0.5rem 0', padding: '0.25rem 0.5rem',
-                        background: 'rgba(148, 163, 184, 0.05)', borderRadius: 'var(--radius-full)'
+                        background: 'var(--bg-input)', borderRadius: 'var(--radius-full)'
                       }}>
                         {msg.text}
                       </div>

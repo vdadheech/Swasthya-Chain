@@ -66,7 +66,7 @@ const WorkerPortal = () => {
                 value={encryptedQR}
                 size={160}
                 level="H"
-                fgColor="#0f172a"
+                fgColor="#111111"
               />
             </div>
 

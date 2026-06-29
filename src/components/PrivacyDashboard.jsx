@@ -38,7 +38,7 @@ const PrivacyDashboard = () => {
         <div className="card" style={{ textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '1rem' }}>
           <div className="circular-gauge" style={{ width: 140, height: 140 }}>
             <svg width="140" height="140">
-              <circle cx="70" cy="70" r="54" fill="none" stroke="rgba(148,163,184,0.1)" strokeWidth="8" />
+              <circle cx="70" cy="70" r="54" fill="none" stroke="var(--glass-border)" strokeWidth="8" />
               <circle
                 cx="70" cy="70" r="54" fill="none"
                 stroke="url(#gaugeGradient)"
@@ -146,8 +146,8 @@ const PrivacyDashboard = () => {
             <div key={i} style={{
               display: 'flex', alignItems: 'center', gap: '1rem',
               padding: '0.75rem', borderRadius: 'var(--radius-md)',
-              background: 'rgba(148, 163, 184, 0.04)',
-              border: '1px solid rgba(148, 163, 184, 0.06)'
+              background: 'var(--bg-input)',
+              border: '1px solid var(--glass-border)'
             }}>
               <div style={{
                 width: 32, height: 32, borderRadius: '50%',

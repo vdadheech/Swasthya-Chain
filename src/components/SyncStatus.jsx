@@ -19,8 +19,8 @@ const SyncStatus = () => {
               <div key={record.recordId || i} style={{
                 display: 'flex', alignItems: 'center', gap: '0.75rem',
                 padding: '0.5rem', borderRadius: 'var(--radius-sm)',
-                background: 'rgba(148, 163, 184, 0.05)',
-                border: '1px solid rgba(148, 163, 184, 0.08)'
+                background: 'var(--bg-input)',
+                border: '1px solid var(--glass-border)'
               }}>
                 <Loader2 size={14} className="animate-spin" style={{ color: 'var(--warning)', flexShrink: 0 }} />
                 <div style={{ flex: 1, minWidth: 0 }}>
