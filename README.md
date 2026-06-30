@@ -1,4 +1,4 @@
-# 🩺 Swasthya Chain
+# Swasthya Chain
 
 **Blockchain-anchored, portable health identity for India's migrant workers — privacy-first, offline-capable, and multilingual.**
 
@@ -38,15 +38,15 @@ India has tens of millions of internal migrant workers who move between states f
 
 | Module | What it shows |
 |---|---|
-| 🪪 **Worker Portal** | A personal health ID card with QR code, full visit history, and on-demand AI insights |
-| 🏥 **Clinic Portal** | A doctor-facing view to scan a worker's ID, dictate a diagnosis by voice, and commit a new record to the chain |
-| 🚑 **Emergency / ICE View** | A no-login screen for first responders showing blood group, allergies, chronic conditions, and emergency contact |
-| 🔒 **Privacy Dashboard** | A privacy score, a full access log (who viewed what, when, and why), and consent controls |
-| 💳 **Insurance Claims** | Auto-drafted PM-JAY/Ayushman Bharat–style claims generated from a medical record, with an eligibility check |
-| ⛓️ **Blockchain Explorer** | An interactive, click-through view of the hash chain linking a patient's records together |
-| 📱 **SMS Simulator** | A simulated low-bandwidth health summary, deliverable by SMS in 4 languages for feature-phone users |
-| 🌐 **Multilingual UI** | Full interface translation across English, Hindi, Tamil, and Bengali |
-| 📶 **Offline-first sync** | Records created while offline queue locally and sync automatically once connectivity returns |
+|  **Worker Portal** | A personal health ID card with QR code, full visit history, and on-demand AI insights |
+|  **Clinic Portal** | A doctor-facing view to scan a worker's ID, dictate a diagnosis by voice, and commit a new record to the chain |
+|  **Emergency / ICE View** | A no-login screen for first responders showing blood group, allergies, chronic conditions, and emergency contact |
+|  **Privacy Dashboard** | A privacy score, a full access log (who viewed what, when, and why), and consent controls |
+|  **Insurance Claims** | Auto-drafted PM-JAY/Ayushman Bharat–style claims generated from a medical record, with an eligibility check |
+|  **Blockchain Explorer** | An interactive, click-through view of the hash chain linking a patient's records together |
+|  **SMS Simulator** | A simulated low-bandwidth health summary, deliverable by SMS in 4 languages for feature-phone users |
+|  **Multilingual UI** | Full interface translation across English, Hindi, Tamil, and Bengali |
+|  **Offline-first sync** | Records created while offline queue locally and sync automatically once connectivity returns |
 
 ## Tech Stack
 
